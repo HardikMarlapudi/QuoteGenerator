@@ -14,27 +14,38 @@ function QuoteGenerator() {
                'Content-Type': 'application/json'
             }
             });
-            const quoteData = response.data[0];
-            setQuote(quoteData.quote);
-            setAuthor(quoteData.author);
+         const quoteData = response.data[0];
+         setQuote(quoteData.quote);
+         setAuthor(quoteData.author);
       } catch (error) {
          console.error("Error cannot fetch quote", error);
-         
+         return;
       }
    }
 
+   const copyQuote = async () => {
+      try {
+      navigator.clipboard.writeText(`${quote} - ${author}`);
+      alert("Quote copied to clipboard");
+   } catch (error) {
+      console.error("Error copying quote", error);
+      return;
+   }
+}
+
    return (
       <>
-      <h1 id="title">Quote Generator</h1>
+      <h1 id="title">Random Quote Generator</h1>
 
       <div className="border">
          <p id="quote">{quote}</p>
-         <p id="author">{author}</p>
-      </div>
+         <p id="author">- {author}</p>
 
-      <center><button id="getQuote" onClick={generateQuote}>GenerateQuote</button></center> 
+         <button id="copyQuote" onClick={copyQuote}>Copy</button>
+         <center><button id="getQuote" onClick={generateQuote}>Get New Quote</button></center> 
+      </div>
       </>
       )
-}
+   }
 
 export default QuoteGenerator;
