@@ -5,7 +5,6 @@
 }
 
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
     padding: 2rem;
@@ -16,7 +15,7 @@ body {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .border {
@@ -33,7 +32,7 @@ body {
 #copyQuote {
     text-align: center;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0.5rem;
     background-color: #f30909;
     border-radius: 0.5rem;
@@ -49,7 +48,7 @@ body {
 #getQuote {
    text-align: center;
    font-size: 20px;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    margin: 0.5rem;
    background-color: #19f309;
    border-radius: 0.5rem;
@@ -66,12 +65,12 @@ body {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     color: #444;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #author {
    font-size: 1.1rem;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    font-weight: bold;
    margin: 0.5rem;
 }
