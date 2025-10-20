@@ -1,21 +1,33 @@
 * {
     background-color: rgb(225, 233, 234);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 2rem;
 }
 
 #title {
-    display: block;
     text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .border {
-    border: 3px solid;
+    border: 2px solid #ccc;
     border-radius: 1rem;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     text-align: center;
-    padding: 10px 20px;
-    font-size: 20px;
-    width: auto;
-    height: auto;
 }
 
 #copyQuote {
@@ -24,9 +36,14 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0.5rem;
     background-color: #f30909;
-    border-radius: 5rem;
+    border-radius: 0.5rem;
     border-color: #f30909;
     cursor: pointer;
+}
+
+#copyQuote:hover {
+    background-color: #d40808;
+    transform: scale(1.05);
 }
 
 #getQuote {
@@ -35,20 +52,48 @@
    font-family: Arial, Helvetica, sans-serif;
    margin: 0.5rem;
    background-color: #19f309;
-   border-radius: 5rem;
+   border-radius: 0.5rem;
    border-color: #19f309;
    cursor: pointer;
 }
 
+#getQuote:hover {
+    background-color: #16d408;
+    transform: scale(1.05);
+}
+
 #quote {
-    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #444;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0.5rem;
 }
 
 #author {
-   font-size: 20px;
+   font-size: 1.1rem;
    font-family: Arial, Helvetica, sans-serif;
    font-weight: bold;
    margin: 0.5rem;
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .border {
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
 }
