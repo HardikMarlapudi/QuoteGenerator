@@ -24,11 +24,12 @@ function QuoteGenerator() {
    }
 
    const copyQuote = async () => {
-      try {
+   if (quote && author) {
       navigator.clipboard.writeText(`${quote} - ${author}`);
       alert("Quote copied to clipboard");
-   } catch (error) {
-      console.error("Error copying quote", error);
+      return;
+   } else {
+      alert("Quote cannot be copied");
       return;
    }
 }
