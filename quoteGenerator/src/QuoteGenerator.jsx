@@ -24,11 +24,12 @@ function QuoteGenerator() {
    }
 
    const copyQuote = async () => {
-      try {
+   if (quote && author) {
       navigator.clipboard.writeText(`${quote} - ${author}`);
       alert("Quote copied to clipboard");
-   } catch (error) {
-      console.error("Error copying quote", error);
+      return;
+   } else {
+      alert("Quote cannot be copied");
       return;
    }
 }
@@ -41,8 +42,8 @@ function QuoteGenerator() {
          <p id="quote">{quote}</p>
          <p id="author">- {author}</p>
 
-         <center><button id="copyQuote" onClick={copyQuote}>Copy</button></center>
-         <center><button id="getQuote" onClick={generateQuote}>Get New Quote</button></center>
+         <button id="copyQuote" onClick={copyQuote}>Copy</button>
+         <center><button id="getQuote" onClick={generateQuote}>Get New Quote</button></center> 
       </div>
       </>
       )
